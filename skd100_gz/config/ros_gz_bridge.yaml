@@ -1,0 +1,49 @@
+# GZ clock for simulation
+- topic_name: "/clock"
+  ros_type_name: "rosgraph_msgs/msg/Clock"
+  gz_type_name: "gz.msgs.Clock"
+  lazy: true
+  direction: GZ_TO_ROS
+
+# IMU topic configuration
+- topic_name: "/mti_630_8A1G6/imu/data"
+  ros_type_name: "sensor_msgs/msg/Imu"
+  gz_type_name: "gz.msgs.IMU"
+  lazy: true
+  direction: GZ_TO_ROS
+
+# Magnetometer topic configuration
+- topic_name: "/mti_630_8A1G6/imu/mag"
+  ros_type_name: "sensor_msgs/msg/MagneticField"
+  gz_type_name: "gz.msgs.Magnetometer"
+  lazy: true
+  direction: GZ_TO_ROS
+
+# LiDAR topic configuration
+- topic_name: "/scan_raw"
+  ros_type_name: "sensor_msgs/msg/LaserScan"
+  gz_type_name: "gz.msgs.LaserScan"
+  lazy: true
+  direction: GZ_TO_ROS
+
+# Navsat topic configuration
+- ros_topic_name: "/ublox_f9p/ublox_gps_node/fix"
+  gz_topic_name: "/ublox_f9p/fix"
+  ros_type_name: "sensor_msgs/msg/NavSatFix"
+  gz_type_name: "gz.msgs.NavSat"
+  lazy: true
+  direction: GZ_TO_ROS
+
+# GZ odometry "sensor"
+- topic_name: "/skd_base_controller/ground_truth/odom"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  gz_type_name: "gz.msgs.Odometry"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- topic_name: "/skd_base_controller/ground_truth/odom_with_covariance"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  gz_type_name: "gz.msgs.OdometryWithCovariance"
+  lazy: true
+  direction: GZ_TO_ROS
+
